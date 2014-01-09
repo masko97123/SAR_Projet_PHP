@@ -1,0 +1,12 @@
+Se dossier comprend la structure définitive du projet ainsi que
+ les différents fichiers qui nous permettons de réaliser le projet.
+
+Il faudra y mettre les fichiers définitif et que ces derniers.
+
+Jy ai ajouter l'ensemble des ressources dont nous auront besoin pour la réalisation du projet
+
+-Bout de code
+-Nuancier
+-Police 
+-Image 
+-etc...

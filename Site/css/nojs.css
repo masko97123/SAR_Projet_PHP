@@ -1,0 +1,36 @@
+.da-slide{
+	position: relative;
+}
+.da-slide [class="no-js"],
+.da-slide [class="picto-2"],
+.da-slide [class="picto-3"],
+.da-slide [class="picto-4"]{
+    position:static;
+    width:100%;
+    display: block;
+}
+/* .da-slide [class="picto-1"]{
+    top:80px;
+    left:0%;
+    opacity: 1;
+} */
+.da-slide [class="picto-2"]{
+    top:80px;
+    left:33.33%;
+    opacity: 1;
+}
+.da-slide [class="picto-3"]{
+    top:80px;
+    left:66.66%;
+    opacity: 1;
+}
+.da-slide [class="picto-4"]{
+    top:340px;
+    left:33.33%;
+    opacity: 1;
+}
+
+.da-dots,
+.da-arrows{
+	display: none;
+}

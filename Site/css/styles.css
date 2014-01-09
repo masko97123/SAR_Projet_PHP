@@ -1,0 +1,538 @@
+@charset:"utf-8";
+/* TEXT FORMATING **************************************************/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon/icomoon.eot');
+    src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font:normal  1.4em/1.5 "Myriad Pro",Helvetica,Arial,sans-serif;
+    color: #fafafa;
+    background: #fff;
+
+}
+/*END OF TEXT FORMATING **************************************************/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after { clear: both; }
+
+.lt-ie8 .clearfix { zoom: 1; }
+
+video,
+img,
+object {
+    height: auto;
+    max-width: 100%;
+}
+
+object,
+embed {
+    height: 100%;
+}
+
+.hide-text {
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+
+/*
+==============================================
+floating Effect
+==============================================
+*/
+
+.floating{
+    animation-name: floating;
+    -webkit-animation-name: floating;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(40%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+/*
+==Author
+ **************************************************/
+.wrapper{
+    max-width: 960px;
+    margin:0 auto;
+}
+[role=document]{
+     background: transparent url(../img/full-page-image.jpg) 0 0 no-repeat fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+
+}
+
+/* BTN Styles
+ **************************************************/
+[role="navigation"] .is-active,
+.is-active{
+    color:red;
+    font-weight:600;
+ }
+.btn {
+    border: none;
+    font-size: 1.4em;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    padding: 23px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: red;
+    color: #fafafa;
+}
+
+.btn:before{
+
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn-3:before {
+    content: "\e00d";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 2px;
+    line-height: 3;
+    font-size: 140%;
+    width: 120px;
+}
+.btn-3:hover {
+    background: #f29e0d;
+}
+
+.btn-3:active {
+    background: #f58500;
+    top: 2px;
+}
+
+/* Button 3e */
+.btn-3e {
+    padding: 25px 120px 25px 60px;
+    overflow: hidden;
+}
+
+.btn-3e:before {
+    left: auto;
+    right: 10px;
+    z-index: 2;
+}
+.btn-3e:after {
+    width: 30%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    z-index: 1;
+    right: 0;
+    top: 0;
+    margin: -5px 0 0 -5px;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform-origin: 0 0;
+    -moz-transform: rotate(-20deg);
+    -ms-transform-origin: 0 0;
+    -ms-transform: rotate(-20deg);
+    transform-origin: 0 0;
+    transform: rotate(-20deg);
+}
+
+.btn-3e:hover:after {
+    width: 40%;
+}
+
+[role="main"] .wrapper p a,
+#so-scroller [role="article"] p a,
+#activites [class*="art-"] p a{
+    color:#f29e0d;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-in-out;
+     -moz-transition: color 0.2s ease-in-out;
+     -o-transition: color 0.2s ease-in-out;
+     -ms-transition: color 0.2s ease-in-out;
+     transition: color 0.2s ease-in-out;
+}
+[role="main"] .wrapper p a:hover,
+#so-scroller [role="article"] p a:hover,
+#activites [class*="art-"] p a:hover
+{
+    color: red;
+}
+
+[role="document"]{
+    margin-top: -60px;
+}
+
+/* GENERAL STYLE **************************************************/
+[role="banner"]{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid #ff0033;
+    z-index:50;
+ }
+[role="banner"] .wrapper > [rel="home"]{
+    Position:absolute;
+    display:block;
+    width:88px;
+    height:96px;
+    background: url(../img/sprite-icone.png) 0 0 no-repeat;
+    top:25px;
+ }
+  [role="navigation"] ul {
+    text-align: right;
+    margin-right: 40px;
+    overflow: hidden;
+
+ }
+
+ [role="navigation"] ul li{
+    display:inline-block;
+ }
+
+ [role="navigation"] ul li a{
+    display: block;
+     padding: 30px 0;
+     color: #fafafa;
+     margin-left: 20px;
+     text-decoration: none;
+     -webkit-transition: color 0.5s ease-in-out;
+     -moz-transition: color 0.5s ease-in-out;
+     -o-transition: color 0.5s ease-in-out;
+     -ms-transition: color 0.5s ease-in-out;
+     transition: color 0.5s ease-in-out;
+ }
+
+[role="navigation"] ul li a:hover{
+    color: red;
+}
+
+.big-title{
+    font-size:4em;
+    font-weight:bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow:0 2px 0 #333, 0 8px 8px #000; /* drop shadow */
+    margin-top:80px;
+    margin-bottom:80px;
+}
+
+.small-title{
+    font-size:3em;
+    font-weight:bold;
+    margin-top:10px;
+
+}
+
+/* END OF GENERAL STYLE **************************************************/
+[role="main"]{
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+[role="main"] .wrapper img{
+    display:block;
+    width:50%;
+    margin:0 auto;
+}
+
+[role="main"] .wrapper p{
+    color:#fafafa;
+    width:58.32%;
+    padding-top:40px;
+    margin:0 auto;
+
+}
+
+[role="main"] .wrapper div.scroll-btn{
+    display:inline-block;
+    width: 64px;
+    height: 64px;
+    background: transparent url(../img/sprite-icone.png) 0 -100px no-repeat;
+    position: absolute;
+    bottom:-20px;
+    left:50%;
+}
+/* END INDEX STYLE **************************************************/
+#so-scroller{
+    background: red;background:  url(../img/div-light.png) center top no-repeat, url(../img/binding_dark.png) repeat;
+
+    border:1px solid transparent;
+    overflow:hidden;
+}
+
+
+[class*="art-"]{
+    width:100%;
+    margin-bottom:40px;
+    padding:0 10px;
+    overflow: hidden;
+}
+#activites .art-1 img,
+#activites .art-2 img,
+.art-1 img,
+.art-2 img{
+    display:block;
+    width:20%;
+    margin-right:20px;
+}
+
+
+[class*="art-"] p{
+    font-size:1.2em;
+}
+
+.art-1 img,
+.art-1 h3,
+.art-1 p{
+    float:left;
+}
+
+.art-2 img,
+.art-2 h3,
+.art-2 p{
+    float:left;
+}
+
+[class*="art-"] h3,
+[class*="art-"] p{
+    width:58.32%;
+    margin-left:20px;
+}
+/* END OF ENTREPRISE STYLE **************************************************/
+
+.quote-sec{
+
+    background: #fafafa;
+    color:#333333;
+    font-size:1.4em;
+    text-align: center;
+    padding:40px 0;
+
+}
+.quote-sec span{
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom:1px dotted #ccc;
+}
+.quote-sec p{
+    position:relative;
+    width:50%;
+    margin:0 auto;
+}
+.quote-sec p:before{
+    position:absolute;
+    width:25px;
+    height:23px;
+    top:0;
+    left:-20px;
+    content:"";
+    display:inline-block;
+
+    background: url(../img/sprite-icone.png) 0 -200px no-repeat;
+}
+.quote-sec span i{
+    font-style:italic;
+}
+
+/* END OF QUOTE STYLING**************************************************/
+.so-side{-webkit-transition: -webkit-transform 0.7s, opacity 0.7s;
+    -moz-transition: -moz-transform 0.7s, opacity 0.7s;
+    transition: transform 0.7s, opacity 0.7s;
+}
+
+.so-init .so-side {
+    opacity: 0;
+}
+
+.so-init .so-side-left {
+    -webkit-transform: translateX(-150px);
+    -moz-transform: translateX(-150px);
+    transform: translateX(-150px);
+}
+
+.so-init .so-side-right {
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    transform: translateX(150px);
+}
+
+.so-section.so-animate .so-side-left,
+.so-section.so-animate .so-side-right {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+
+}
+/* END OF SCROLL STYLING**************************************************/
+#activites{
+
+    background: #fafafa;
+    color:#333;
+}
+#activites h2{
+    font-size:4em;
+    font-weight:bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#activites ul li{
+    margin-bottom: 100px;
+}
+
+#activites [class*="art-"]{
+    display:block;
+    width:33.33%;
+    text-align: center;
+}
+#activites h3{
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.art-3,
+.art-4,
+.art-5,
+.art-7,
+.art-8,
+.art-9{
+    float: left;
+}
+.art-6,
+.art-10{
+    margin:0 auto;
+}
+
+#activites [class*="art-"] p{
+    margin:0 auto;
+    padding-top: 40px;
+}
+#activites [class*="art-"] .art-picto{
+    display: block;
+    width:100px;
+    height:113px;
+    margin:0 auto;
+    background: red;
+    padding: 0;
+
+}
+#activites .slider .art-1,
+#activites .slider .art-2{
+    width:100%;
+    text-align: left;
+}
+
+
+#activites .art-3 .art-picto{
+    background: url(../img/sprite-img.png) 0 0 no-repeat;}
+#activites .art-4 .art-picto{
+    background: url(../img/sprite-img.png) -125px 0 no-repeat;}
+#activites .art-5 .art-picto{
+    background: url(../img/sprite-img.png) -250px 0 no-repeat;}
+#activites .art-6 .art-picto{
+    background: url(../img/sprite-img.png) -375px 0 no-repeat;}
+#activites .art-7 .art-picto{
+    background: url(../img/sprite-img.png) 0 -125px no-repeat;}
+#activites .art-8 .art-picto{
+    background: url(../img/sprite-img.png) -125px -125px no-repeat;}
+#activites .art-9 .art-picto{
+    background: url(../img/sprite-img.png) -250px -125px no-repeat;}
+#activites .art-10 .art-picto{
+    background: url(../img/sprite-img.png) -375px -125px no-repeat;}
+
+/*END OF SLIDER STYLING  **************************************************/
+#clients{
+    border-top:1px solid #ccc;
+    padding-top: 40px;
+}
+
+#clients img{
+    display:block;
+    float: right;
+}
